@@ -1,0 +1,27 @@
+{
+  "name": "@santiroldan/monads",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/index.d.ts",
+  "version": "0.0.0-semantically-released",
+  "description": "A functional development pattern collection of monads implemented in TypeScript",
+  "scripts": {
+    "dev": "tsc --noEmit",
+    "dev:watch": "npm run compile -- --watch",
+    "build": "tsc -b",
+    "test": "vitest run",
+    "semantic-release": "semantic-release"
+  },
+  "author": "Santi Roldán",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/santiroldan/either.git"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.12.7",
+    "semantic-release": "^24.1.0",
+    "typescript": "^5.4.5",
+    "vitest": "^2.0.5"
+  }
+}
