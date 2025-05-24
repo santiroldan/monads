@@ -1,4 +1,4 @@
-import { Future } from 'src/future';
+import { Future } from 'src/future/future';
 import { describe, expect, it } from 'vitest';
 
 describe('Future', () => {
