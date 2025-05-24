@@ -1,10 +1,10 @@
 
 import { Matchable } from '@/shared/matchable';
 import { Monad } from '@/shared/monad';
-import { Future, Futurizable } from '../future/future';
+import { Task, Taskable } from '../task/task';
 
 
-export abstract class Either<L, R> implements Monad<R>, Matchable<R, L>, Futurizable<R> {
+export abstract class Either<L, R> implements Monad<R>, Matchable<R, L>, Taskable<R> {
   public static right<T>(value: T): Either<never, T> {
     return Right.of(value);
   }
@@ -42,7 +42,7 @@ export abstract class Either<L, R> implements Monad<R>, Matchable<R, L>, Futuriz
 
   public abstract isRight(): this is Right<L, R>;
 
-  public abstract toFuture(): Future<R>;
+  public abstract toTask(): Task<R>;
 }
 
 export class Left<L, R> extends Either<L, R> {
@@ -82,8 +82,8 @@ export class Left<L, R> extends Either<L, R> {
     return false;
   }
 
-  public toFuture(): Future<never> {
-		return Future.of(() => Promise.reject(new Error(String(this.value ?? 'Either: Unknown error'))));
+  public toTask(): Task<never> {
+		return Task.of(() => Promise.reject(new Error(String(this.value ?? 'Either: Unknown error'))));
   }
 }
 
@@ -124,7 +124,7 @@ export class Right<L, R> extends Either<L, R> {
     return true;
   }
 
-  public toFuture(): Future<R> {
-    return Future.of(() => Promise.resolve(this.value));
+  public toTask(): Task<R> {
+    return Task.of(() => Promise.resolve(this.value));
   }
 }

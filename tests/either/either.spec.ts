@@ -29,7 +29,7 @@ describe('Either', () => {
 
         it('should convert to a resolved Future', async () => {
             const e = Either.right('ok');
-            const future = e.toFuture();
+            const future = e.toTask();
 
             await expect(future.run()).resolves.toBe('ok');
         });
@@ -62,7 +62,7 @@ describe('Either', () => {
 
         it('should convert to a rejected Future', async () => {
             const e = Either.left('fail');
-            const future = e.toFuture();
+            const future = e.toTask();
             await expect(future.run()).rejects.toThrow('fail');
         });
     });
