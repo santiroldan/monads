@@ -11,6 +11,10 @@ export class Future<T> implements Monad<T> {
     return new Future(action);
   }
 
+  public run(): Promise<T> {
+    return this.action();
+  }
+
   public map<U>(transform: (value: T) => U): Future<U> {
     return new Future<U>(() => this.action().then(transform));
   }
