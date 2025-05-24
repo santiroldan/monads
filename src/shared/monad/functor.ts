@@ -1,3 +1,3 @@
 export interface Functor<T> {
-  map<U>(fn: (value: T) => U): Functor<U>;
+    map<U>(fn: (value: T) => U): Functor<U>;
 }
