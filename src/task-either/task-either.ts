@@ -2,7 +2,6 @@ import {Monad} from "@/shared/monad";
 import {Task, Taskable} from "@/task/task";
 import {Either} from "@/either/either";
 
-
 export class TaskEither<L, R> implements Monad<R>, Taskable<R> {
     private constructor(private readonly task: Task<Either<L, R>>) {
     }
