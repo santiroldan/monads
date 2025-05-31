@@ -2,7 +2,6 @@ import {Monad} from "@/shared/monad";
 import {Matchable} from "@/shared/matchable";
 
 export abstract class Option<T> implements Monad<T>, Matchable<T, void> {
-
     public abstract isSome(): this is Some<T>;
 
     public abstract isNone(): this is None;
@@ -16,11 +15,11 @@ export abstract class Option<T> implements Monad<T>, Matchable<T, void> {
     public abstract match<S>(fn: (value: T) => S, otherFn: (other: void) => S): S;
 
     public static some<T>(value: T): Option<T> {
-        return new Some(value);
+        return Some.of(value);
     }
 
     public static none<T = never>(): Option<T> {
-        return new None();
+        return None.of();
     }
 
     public static fromNullable<T>(value: T | null | undefined): Option<T> {
@@ -29,8 +28,12 @@ export abstract class Option<T> implements Monad<T>, Matchable<T, void> {
 }
 
 export class Some<T> extends Option<T> {
-    public constructor(private readonly value: T) {
+    private constructor(private readonly value: T) {
         super();
+    }
+
+    public static of<T>(value: T): Some<T> {
+        return new Some(value);
     }
 
     public isSome(): this is Some<T> {
@@ -59,6 +62,14 @@ export class Some<T> extends Option<T> {
 }
 
 export class None extends Option<never> {
+    private constructor() {
+        super();
+    }
+
+    public static of(): None {
+        return new None();
+    }
+
     public isSome(): this is Some<never> {
         return false;
     }
