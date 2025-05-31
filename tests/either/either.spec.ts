@@ -1,4 +1,4 @@
-import {Either} from 'src/either/either';
+import {Either} from '@/either/either';
 import {describe, expect, it} from 'vitest';
 
 describe('Either', () => {

@@ -1,4 +1,4 @@
-import {Task} from 'src/task/task';
+import {Task} from '@/task/task';
 import {describe, expect, it, vi} from 'vitest';
 
 describe('Task', () => {
