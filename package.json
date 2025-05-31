@@ -18,7 +18,7 @@
   "author": "Santi Roldán",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/santiroldan/either.git"
+    "url": "git+https://github.com/santiroldan/monads.git"
   },
   "license": "MIT",
   "devDependencies": {
