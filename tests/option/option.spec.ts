@@ -39,7 +39,7 @@ describe("Option", () => {
     });
 
     describe("Some", () => {
-        const some = new Some(10);
+        const some = Some.of(10);
 
         it("map should transform the value", () => {
             const mapped = some.map(x => x * 2);
@@ -67,7 +67,7 @@ describe("Option", () => {
     });
 
     describe("None", () => {
-        const none = new None();
+        const none = None.of();
 
         it("map should return None", () => {
             const mapped = none.map(x => x);
