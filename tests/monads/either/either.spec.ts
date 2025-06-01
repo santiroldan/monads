@@ -1,5 +1,5 @@
-import {Either} from '@/either/either';
 import {describe, expect, it} from 'vitest';
+import {Either} from '@/monads/either/either';
 
 describe('Either', () => {
     describe('Right', () => {

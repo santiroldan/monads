@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { IO } from '@/io/io';
+import { IO } from '@/monads/io/io';
 
 describe('IO', () => {
     it('should create an IO from a function and run it', () => {

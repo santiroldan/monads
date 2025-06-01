@@ -1,6 +1,5 @@
-import {Either} from 'src/either/either';
 import {describe, expect, it} from 'vitest';
-import {None, Option, Some} from "@/option/option";
+import {None, Option, Some} from "@/monads/option/option";
 
 describe("Option", () => {
     describe("Option.some", () => {

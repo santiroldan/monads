@@ -1,5 +1,5 @@
-import { Reader } from "@/reader/reader";
 import {describe, expect, it} from 'vitest';
+import {Reader} from "@/monads/reader/reader";
 
 describe("Reader", () => {
     it("should create a Reader with of and return the value with run", () => {

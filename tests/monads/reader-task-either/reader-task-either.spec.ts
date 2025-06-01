@@ -1,5 +1,5 @@
-import {ReaderTaskEither} from "@/reader-task-either/reader-task-either";
 import {describe, expect, it} from "vitest";
+import {ReaderTaskEither} from "@/monads/reader-task-either/reader-task-either";
 
 describe("ReaderTaskEither - All methods", () => {
     it("should provide the environment with ask", async () => {

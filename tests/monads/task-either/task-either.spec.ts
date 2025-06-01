@@ -1,7 +1,7 @@
 import {describe, expect, it} from 'vitest';
-import {TaskEither} from "@/task-either/task-either";
-import {Task} from "@/task/task";
-import {Either} from "@/either/either";
+import {TaskEither} from "@/monads/task-either/task-either";
+import {Task} from "@/monads/task/task";
+import {Either} from "@/monads/either/either";
 
 
 describe("TaskEither", () => {
