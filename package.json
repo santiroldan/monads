@@ -7,7 +7,7 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
-  "description": "A functional development pattern collection of monads implemented in TypeScript",
+  "description": "Una colección de mónadas implementadas en TypeScript siguiendo el patrón de desarrollo funcional",
   "scripts": {
     "dev": "tsc --noEmit",
     "dev:watch": "npm run compile -- --watch",
