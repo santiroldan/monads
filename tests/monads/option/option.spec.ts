@@ -1,5 +1,5 @@
 import {describe, expect, it} from 'vitest';
-import {None, Option, Some} from '@/monads/option/option';
+import {Option, None, Some} from '@/monads';
 
 describe('Option', () => {
     describe('Option.some', () => {

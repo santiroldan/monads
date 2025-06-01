@@ -1,5 +1,5 @@
 import {describe, expect, it, vi} from 'vitest';
-import {Task} from '@/monads/task/task';
+import {Task} from '@/monads';
 
 describe('Task', () => {
     it('should create a Task instance', () => {

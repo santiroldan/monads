@@ -1,8 +1,5 @@
 import {describe, expect, it} from 'vitest';
-import {TaskEither} from '@/monads/task-either/task-either';
-import {Task} from '@/monads/task/task';
-import {Either} from '@/monads/either/either';
-
+import {Either, Task, TaskEither} from '@/monads';
 
 describe('TaskEither', () => {
     describe('static constructors', () => {
