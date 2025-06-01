@@ -1,6 +1,6 @@
-# 🎯 Librería de Mónadas Funcionales en TypeScript
+# 🎯 Librería de Mónadas en TypeScript
 
-Este proyecto implementa una colección de mónadas funcionales en TypeScript orientadas a mejorar la gestión de efectos, errores y dependencias en arquitecturas limpias y hexagonales. Incluye `Either`, `IO`, `Option`, `Reader`, `Task`, `TaskEither` y combinaciones como `ReaderTaskEither`.
+Este proyecto implementa una colección de mónadas en TypeScript orientadas a mejorar la gestión de efectos, errores y dependencias en arquitecturas limpias y hexagonales. Incluye `Either`, `IO`, `Option`, `Reader`, `Task`, `TaskEither` y combinaciones como `ReaderTaskEither`.
 
 ---
 
