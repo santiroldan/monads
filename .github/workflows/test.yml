@@ -21,4 +21,4 @@ jobs:
         run: npm install
 
       - name: Run Vitest tests
-        run: pnpm vitest run --no-threads
+        run: npx vitest run --no-threads
