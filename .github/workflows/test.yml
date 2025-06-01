@@ -11,7 +11,7 @@ jobs:
       image: node:20-alpine
 
     steps:
-      - name: Install git (required by actions/checkout)
+      - name: Install git
         run: apk add --no-cache git
 
       - name: Checkout repository
@@ -20,5 +20,5 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Run Vitest tests
-        run: npx vitest run --no-threads
+      - name: Run tests
+        run: npx vitest run --ci
