@@ -1,4 +1,4 @@
-import {Monad} from "@/shared/monad";
+import {Monad} from '@/shared';
 
 export class Reader<Env, A> implements Monad<A> {
     private constructor(private readonly runFn: (env: Env) => A) {

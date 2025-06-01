@@ -1,5 +1,4 @@
-import {Monad} from "@/shared/monad";
-import {Matchable} from "@/shared/matchable";
+import {Matchable, Monad} from '@/shared';
 
 export abstract class Option<T> implements Monad<T>, Matchable<T, void> {
     public abstract isSome(): this is Some<T>;

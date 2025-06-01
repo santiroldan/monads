@@ -1,6 +1,5 @@
-import {Task} from "@/monads/task/task";
-import {Either} from "@/monads/either/either";
-import {Monad} from "@/shared/monad";
+import {Either, Task} from '@/monads';
+import {Monad} from '@/shared';
 
 export class ReaderTaskEither<Env, L, R> implements Monad<R> {
     private constructor(

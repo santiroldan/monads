@@ -1,4 +1,4 @@
-import {Monad} from "@/shared/monad";
+import {Monad} from '@/shared';
 
 export interface Taskable<T> {
     toTask(): Task<T>;

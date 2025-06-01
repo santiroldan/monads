@@ -1,7 +1,5 @@
-import {Matchable} from '@/shared/matchable';
-import {Monad} from '@/shared/monad';
+import {Matchable, Monad} from '@/shared';
 import {Task, Taskable} from '../task/task';
-
 
 export abstract class Either<L, R> implements Monad<R>, Matchable<R, L>, Taskable<R> {
     public static right<T>(value: T): Either<never, T> {

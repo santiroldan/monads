@@ -1,4 +1,4 @@
-import { Monad } from '@/shared/monad';
+import {Monad} from '@/shared';
 
 export class IO<T> implements Monad<T> {
     private readonly effect: () => T;
